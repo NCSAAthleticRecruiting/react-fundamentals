@@ -4,15 +4,15 @@
 <!-- 🐨 Create (in HTML) a <body> with a <div> with the id of "root" -->
   <html>
     <body>
-      <div id="root">
-        <script type="module">
-          console.log('Hello Console');
-          const div = document.createElement('div');
-          div.textContent = "Hello World";
-          div.className = "container";
-          document.getElementById("root").append(div);
-        </script>
-      </div>
+      <script type="module">
+        const root = document.createElement('div');
+        root.id = "root";
+        const div = document.createElement('div');
+        div.textContent = "Hello World";
+        div.className = "container";
+        root.append(div);
+        document.body.append(root);
+      </script>
     </body>
   </html>
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
